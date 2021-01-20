@@ -146,14 +146,22 @@ $myback: rgb(248, 245, 240);
     }
     }
     .me{
-        top: 33rem;
+        top: 31rem;
         text-align: center;
         position: relative;
         z-index: 5;
         i{
             font-size: 80px;
             color: #dce4de;
+            animation-name: anim;
+            animation-iteration-count: infinite;
+            animation-duration: 2.4s;
         }
+        @keyframes anim {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-30px);}
+            60% {transform: translateY(-15px);}
+        } 
         i:hover{
             color: rgb(223, 209, 15);
             transition: .6s;
@@ -249,6 +257,7 @@ $myback: rgb(248, 245, 240);
           }
     }
     .project{
+        height: 140vh;
         background-color: $myback;
         padding-top: 5rem;
         text-align: center;
@@ -308,15 +317,15 @@ $myback: rgb(248, 245, 240);
             transform: scaleX(0);
           }
           figure{
-            #move{
-                display: inline-block;
-            }
             img{
                 position: relative;
                 left: 0;
                 right: 0;
                 top: -9rem;
                 bottom: 0;
+            }
+            img:hover{
+                opacity: .1;
             }
             .first{
                 width: 50%;
@@ -466,11 +475,34 @@ $myback: rgb(248, 245, 240);
             top: 0;
           }
     }
+    .project{
+        text-align: center;
+        &-text{
+            font-size: 18px;
+        }
+        .container{
+            display: block;
+            justify-content: space-evenly;
+            z-index: 0;
+        }
+    }
 }
         /* navbar css for mobile end */
         @media screen and (min-width: 767px) and (max-width: 1019px){
             .me{
                 display: none;
+            }
+        }
+        @media screen and (min-width: 612px) and (max-width: 1019px){
+            .project{
+                text-align: center;
+                &-text{
+                    font-size: 18px;
+                }
+                .container{
+                    display: grid;
+                    z-index: 0;
+                }
             }
         }
     /* mobile breakpoint end */

@@ -133,7 +133,12 @@ window.onscroll = function () {
 let moves = document.getElementById('moves')
 moves.addEventListener('mousedown', mouseMove)
 
-function mouseMove(){
+function mouseMove() {
   let img = document.getElementById('move')
-  img.style.display = 'none'
+  if (img.style.visibility = 'visible') {
+    img.style.visibility = 'hidden'
+  }
+  else{
+    img.style.visibility = 'visible'
+  }
 }
