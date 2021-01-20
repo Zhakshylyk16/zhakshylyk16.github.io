@@ -540,6 +540,7 @@ a.site-logo:hover {
   .main-content {
     position: static;
     padding-top: 30%;
+    height: 70vh;
   }
   .main-content .image {
     position: static;
@@ -548,11 +549,11 @@ a.site-logo:hover {
     border: 2px solid #6090f0;
   }
   .main-content .main-text span {
-    font-size: 12px;
+    font-size: 17px;
     text-align: center;
   }
   .me {
-    display: none;
+    top: -0.5rem;
   }
   .about {
     padding-top: 2rem;
