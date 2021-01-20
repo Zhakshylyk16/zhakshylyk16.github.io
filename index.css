@@ -1,0 +1,24 @@
+/* ---- reset ---- */
+
+  canvas {
+    display: block;
+  }
+  
+  /* ---- particles.js container ---- */
+  
+  #particles-js {
+    width: 100%;
+    background-color: #000022;
+    background-attachment: fixed;
+    background-image: url('img/e5512ace37faa38.jpg');
+  }
+  
+  #stats,
+  .count-particles{
+    -webkit-user-select: none;
+  }
+  
+  #stats{
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+  }
