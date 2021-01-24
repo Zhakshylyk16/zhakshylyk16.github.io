@@ -357,6 +357,7 @@ a.site-logo:hover {
 .projects {
   padding-top: 2rem;
   text-align: center;
+  position: relative;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
