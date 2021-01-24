@@ -198,6 +198,17 @@ let arrLang = {
     'projecty': 'Projects',
     'contacts': 'Contacts',
     'im': 'I am',
+    'clearProg': "A neat programmer is a fast programmer.",
+    'aboutMy': 'About Myself',
+    'hey': `Hey. I am currently studying to be a programmer and have more than one year of
+    experience.
+    The goal I’m currently striving for is to make this
+    world a better place to live in by starting the changes
+    with myself. Sure, I’ve had bad experiences in my
+    life too, but this is exactly what made me the way
+    I am now: grateful, full of love, with a desire to
+    study well because it will help me become a successful
+    person in future and have a high quality of life.`
   },
   'ru': {
     'zhakshylyk': 'Жакшылык',
@@ -206,12 +217,15 @@ let arrLang = {
     'projecty': 'Проекты',
     'contacts': 'Контакты',
     'im': 'Я',
+    'clearProg': '«Аккуратный программист - быстрый программист».',
+    'aboutMy': 'Обо мне',
+    'hey': `Привет. В настоящее время я учусь на программиста и имею опыт работы более одного года. Цель, к которой я сейчас стремлюсь, - сделать этот мир лучше для жизни, начав изменения с себя. Конечно, в моей жизни тоже был плохой опыт, но именно это сделало меня таким, какой я есть сейчас: благодарным, полным любви, с желанием хорошо учиться, потому что это поможет мне стать успешным человеком в будущем и иметь высокое качество жизни.`
   }
 }
-$(function(){
-  $('.translate').click(function(){
+$(function () {
+  $('.translate').click(function () {
     var lang = $(this).attr('id')
-    $('.lang').each(function(index, element){
+    $('.lang').each(function (index, element) {
       $(this).text(arrLang[lang][$(this).attr('key')])
     })
   })
