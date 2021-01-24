@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="scss/style.scss">
     <link rel="stylesheet" href="scss/reset.css">
     <link rel="short icon" href="img/icon.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="scss/animate.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 </head>
 
@@ -21,12 +21,24 @@
             <div class="navbar-area" id="menu">
                 <div class="container">
                     <nav class="site-navbar">
-                        <a href="#particles-js" class="site-logo wow flipInX">Zhakshylyk</a>
+                        <div class="check">
+                            <a href="#particles-js" class="site-logo wow flipInX lang" key="zhakshylyk">Zhakshylyk</a>
+                            <div class="box">
+                                <input id="checkbox" type="checkbox">
+                                <label for="checkbox"></label>
+                            </div>
+                        </div>
                         <ul>
-                            <li class="wow flipInX"><a href="#particles-js"><b>HOME</b> </a></li>
-                            <li class="wow flipInX"><a href="#blog"><b>BLOG</b> </a></li>
-                            <li class="wow flipInX"><a href="#"><b>PROJECTS</b> </a></li>
-                            <li class="wow flipInX"><a href="#"><b>CONTACTS</b> </a></li>
+                            <li class="wow flipInX"><a href="#particles-js" class="lang" key="home"><b>HOME</b> </a></li>
+                            <li class="wow flipInX"><a href="#blog" class="lang" key="blog"><b>BLOG</b> </a></li>
+                            <li class="wow flipInX"><a href="#" class="lang" key="projecty"><b>PROJECTS</b> </a></li>
+                            <li class="wow flipInX"><a href="#" class="lang" key="contacts"><b>CONTACTS</b> </a></li>
+                            <div class="lanj">
+                                <li><button class="translate" id="en">EN</button></li>
+                                <span>/</span>
+                                <li><button class="translate" id="ru">RU</button></li>
+                            </div>
+
                         </ul>
                         <button class="nav-toggler">
                             <span></span>
@@ -38,14 +50,14 @@
         <section class="main-content">
             <img class="image wow flipInX" src="img/me.png" alt="me">
             <h1 class="main-text">
-                <span class="iam">I am</span>
-                <span href="" class="typewrite" data-period="2000"
+                <span class="iam lang" key="im">I am</span>
+                <span href="" class="typewrite lang" key="front" data-period="2000"
                     data-type='[ " Zhakshylyk.","Front-End and mobile developer." ]'>
                 </span>
             </h1>
         </section>
         <div class="me">
-            <a href="#blog" class="wow slideInDown"  data-wow-iteration="10"><i class="fas fa-caret-down"></i></a>
+            <a href="#blog" class="wow slideInDown" data-wow-iteration="10"><i class="fas fa-caret-down"></i></a>
         </div>
     </div>
     <section class="about" id="blog">
@@ -67,44 +79,47 @@
     </section>
     <section class="projects">
         <div class="skills">
-            <h2 class="wow fadeInUp"><b>Skills</b> </h2>
+            <h2 class="wow fadeInUp skills"><b>Skills</b> </h2>
             <div class="skill">
                 <div class="skill-name"></div>
                 <div class="skill">
-                    <div class="skill-name"><i class="fab fa-html5"></i> HTML (Pug) + <i class="fab fa-css3-alt"></i>
+                    <div class="skill-name"><i class="fabs fab fa-html5"></i> HTML (Pug) + <i
+                            class="fab fa-css3-alt"></i>
                         CSS (SCSS),(LESS)(Styles),(Bootstrap), (Material UI)</div>
                     <div class="skill-bar">
                         <div class="skill-per" per="95"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name"><i class="fab fa-js-square"></i> JavaScript (React), (Vue), (jQuery) (React
+                    <div class="skill-name"><i class="fabs fab fa-js-square"></i> JavaScript (React), (Vue), (jQuery)
+                        (React
                         Native) </div>
                     <div class="skill-bar">
                         <div class="skill-per" per="70"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name"><i class="fab fa-java"></i> Java (ee)</div>
+                    <div class="skill-name"><i class="fabs fab fa-java"></i> Java (ee)</div>
                     <div class="skill-bar">
                         <div class="skill-per" per="30"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name"><i class="fab fa-linux"></i> WebPack (plugins), Rest API, fetch, Ajax, Git,
+                    <div class="skill-name"><i class="fabs fab fa-linux"></i> WebPack (plugins), Rest API, fetch, Ajax,
+                        Git,
                         NPM, Yarn, Linux</div>
                     <div class="skill-bar">
                         <div class="skill-per" per="75"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name"><i class="fab fa-php"></i> CMS (Joomla, wordpress, php)</div>
+                    <div class="skill-name"><i class="fabs fab fa-php"></i> CMS (Joomla, wordpress, php)</div>
                     <div class="skill-bar">
                         <div class="skill-per" per="50"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name"><i class="fab fa-figma"></i> Figma, photoshop, adobe xd, avocode</div>
+                    <div class="skill-name"><i class="fabs fab fa-figma"></i> Figma, photoshop, adobe xd, avocode</div>
                     <div class="skill-bar">
                         <div class="skill-per" per="86"></div>
                     </div>
@@ -150,7 +165,7 @@
     <script>
         new WOW().init();
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/index.js"></script>
 </body>

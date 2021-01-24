@@ -131,14 +131,88 @@ window.onscroll = function () {
 // mousemove cards
 
 let moves = document.getElementById('moves')
-moves.addEventListener('mousedown', mouseMove)
+moves.addEventListener('mousemove', mouseMove)
 
 function mouseMove() {
   let img = document.getElementById('move')
   if (img.style.visibility = 'visible') {
     img.style.visibility = 'hidden'
   }
-  else{
+  else {
     img.style.visibility = 'visible'
   }
 }
+
+// checkbox dark mode 
+
+const button = document.querySelector('#checkbox')
+const body = document.body
+
+let i = document.querySelector('.fa-caret-down')
+const about = document.querySelector('.about')
+const border = document.querySelector('.border')
+const projects = document.querySelector('.projects')
+const skills = document.querySelector('.skills')
+let project = document.querySelector('.project')
+let project_text = document.querySelector('.project-text')
+const practicles = document.getElementById('particles-js')
+let myBack = background = 'rgb(248, 245, 240)'
+function change() {
+  if (button.checked) {
+    body.classList.add("dark")
+    body.style.transition = '1s'
+    i.style.color = 'gray'
+    about.style.background = 'black'
+    about.style.color = 'white'
+    border.style.visibility = 'hidden'
+    projects.style.background = 'black'
+    skills.style.color = 'white'
+    project.style.background = 'black'
+    project_text.style.color = 'white'
+    practicles.style.backgroundImage = "url('img/back.jpg')"
+    practicles.style.backgroundSize = 'cover'
+    practicles.style.backgroundRepeat = 'no-repeat'
+  }
+  else {
+    body.classList.remove("dark")
+    i.style.color = 'white'
+    about.style.background = myBack
+    about.style.color = 'black'
+    border.style.visibility = 'visible'
+    projects.style.background = myBack
+    skills.style.color = 'black'
+    project.style.background = myBack
+    project_text.style.color = 'black'
+    practicles.style.backgroundImage = "url('img/e5512ace37faa38.jpg')"
+  }
+}
+button.addEventListener('change', change)
+
+// change lang
+
+let arrLang = {
+  'en': {
+    'zhakshylyk': 'Zhakshylyk',
+    'home': 'Home',
+    'blog': 'Blog',
+    'projecty': 'Projects',
+    'contacts': 'Contacts',
+    'im': 'I am',
+  },
+  'ru': {
+    'zhakshylyk': 'Жакшылык',
+    'home': 'Домой',
+    'blog': 'Блог',
+    'projecty': 'Проекты',
+    'contacts': 'Контакты',
+    'im': 'Я',
+  }
+}
+$(function(){
+  $('.translate').click(function(){
+    var lang = $(this).attr('id')
+    $('.lang').each(function(index, element){
+      $(this).text(arrLang[lang][$(this).attr('key')])
+    })
+  })
+})

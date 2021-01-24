@@ -38,22 +38,84 @@ $myback: rgb(248, 245, 240);
     #menu{
         transition: 8s;
     }
+    
     .site-navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .check{
+            display: grid;
+            grid-template-columns: 200px 10px;
+            .dark {
+                background: #110d0d;
+              }
+              input[type=checkbox]{
+                visibility: hidden;
+              }
+              .box {
+                width: 40px;
+                height: 15px;
+                background: gray;
+                position: relative;
+                border-radius: 4px;
+                top: 4px;
+              }
+              
+              label {
+                  display: block;
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 50%;
+                  transition: all .6s ease;
+                  cursor: pointer;
+                  position: absolute;
+                  top: -3px;
+                  left: -3px;
+                  background: #333333;
+                
+              }  
+              input[type=checkbox]:checked + label {
+                  left: 27px;
+                  background: white;
+              }
+        }
+    }
+    .lanj{
+        display: grid;
+        grid-template-columns: 30px 14px 30px;
+        button{
+            font-family: $family;
+            background: transparent;
+            color: white;
+            border: none;
+            position: relative;
+            top: 15px;
+            font-size: 18px;
+        }
+        span{
+            color: white;
+            user-select: none;
+            position: relative;
+            top: 18px;
+        }
+        button:hover{
+            cursor: pointer;
+            transition: .4s;
+            background:  rgb(96, 144, 240);
+            border-radius: 5px;
+        }
     }
     a.site-logo {
         font-size: 26px;
         font-weight: 800;
         text-transform: uppercase;
-        color:  rgb(216, 206, 64);
+        color:   rgb(223, 209, 15);
         text-decoration: none;
     }
     a.site-logo:hover{
         color:  #1aff66;
-        transition: .6s;
-        font-size: 25.7px;
+        transition: 1s;
+        font-size: 25.3px;
     }
     .site-navbar ul {
         margin: 0;
@@ -146,7 +208,7 @@ $myback: rgb(248, 245, 240);
     }
     }
     .me{
-        top: 31rem;
+        top: 34rem;
         text-align: center;
         position: relative;
         z-index: 5;
@@ -168,6 +230,7 @@ $myback: rgb(248, 245, 240);
         }
     }
     .about{
+        position: relative;
         background: $myback;
         font-family: $family;
         display: flex;
@@ -252,13 +315,13 @@ $myback: rgb(248, 245, 240);
             transform: translateX(50%) rotate(45deg);
             border-radius: 2px;
           }
-          i{
+          .fabs{
               color: rgb(15, 15, 15);
           }
     }
     .project{
         height: 140vh;
-        background-color: $myback;
+        background: $myback;
         padding-top: 5rem;
         text-align: center;
         &-text{
@@ -292,6 +355,9 @@ $myback: rgb(248, 245, 240);
         }
         figure:hover{
             background-color: $myback;
+            img{
+                opacity: 0.1;
+            }
         }
           figure p {
             font-family: $family;
@@ -384,6 +450,42 @@ $myback: rgb(248, 245, 240);
         }
         .site-navbar {
         min-height: 60px;
+        .check{
+            display: grid;
+            grid-template-columns: 120px 10px;
+            .dark {
+                background: #110d0d;
+              }
+              input[type=checkbox]{
+                visibility: hidden;
+              }
+              .box {
+                width: 40px;
+                height: 10px;
+                background: gray;
+                position: relative;
+                border-radius: 4px;
+                top: 4px;
+              }
+              
+              label {
+                  display: block;
+                  width: 15px;
+                  height: 15px;
+                  border-radius: 50%;
+                  transition: all .6s ease;
+                  cursor: pointer;
+                  position: absolute;
+                  top: -3px;
+                  left: -3px;
+                  background: #333333;
+                
+              }  
+              input[type=checkbox]:checked + label {
+                  left: 27px;
+                  background: white;
+              }
+        }
         }
         .site-navbar ul {
         position: absolute;

@@ -52,19 +52,97 @@ html {
           align-items: center;
 }
 
+.site-navbar .check {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 10px;
+      grid-template-columns: 200px 10px;
+}
+
+.site-navbar .check .dark {
+  background: #110d0d;
+}
+
+.site-navbar .check input[type=checkbox] {
+  visibility: hidden;
+}
+
+.site-navbar .check .box {
+  width: 40px;
+  height: 15px;
+  background: gray;
+  position: relative;
+  border-radius: 4px;
+  top: 4px;
+}
+
+.site-navbar .check label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  cursor: pointer;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  background: #333333;
+}
+
+.site-navbar .check input[type=checkbox]:checked + label {
+  left: 27px;
+  background: white;
+}
+
+.lanj {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30px 14px 30px;
+      grid-template-columns: 30px 14px 30px;
+}
+
+.lanj button {
+  font-family: "Fraunces", serif, "Raleway", sans-serif;
+  background: transparent;
+  color: white;
+  border: none;
+  position: relative;
+  top: 15px;
+  font-size: 18px;
+}
+
+.lanj span {
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  top: 18px;
+}
+
+.lanj button:hover {
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+  background: #6090f0;
+  border-radius: 5px;
+}
+
 a.site-logo {
   font-size: 26px;
   font-weight: 800;
   text-transform: uppercase;
-  color: #d8ce40;
+  color: #dfd10f;
   text-decoration: none;
 }
 
 a.site-logo:hover {
   color: #1aff66;
-  -webkit-transition: .6s;
-  transition: .6s;
-  font-size: 25.7px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  font-size: 25.3px;
 }
 
 .site-navbar ul {
@@ -180,7 +258,7 @@ a.site-logo:hover {
 }
 
 .me {
-  top: 31rem;
+  top: 34rem;
   text-align: center;
   position: relative;
   z-index: 5;
@@ -234,6 +312,7 @@ a.site-logo:hover {
 }
 
 .about {
+  position: relative;
   background: #f8f5f0;
   font-family: "Fraunces", serif, "Raleway", sans-serif;
   display: -webkit-box;
@@ -346,13 +425,13 @@ a.site-logo:hover {
   border-radius: 2px;
 }
 
-.projects i {
+.projects .fabs {
   color: #0f0f0f;
 }
 
 .project {
   height: 140vh;
-  background-color: #f8f5f0;
+  background: #f8f5f0;
   padding-top: 5rem;
   text-align: center;
 }
@@ -400,6 +479,10 @@ a.site-logo:hover {
 
 .project figure:hover {
   background-color: #f8f5f0;
+}
+
+.project figure:hover img {
+  opacity: 0.1;
 }
 
 .project figure p {
@@ -502,6 +585,43 @@ a.site-logo:hover {
   }
   .site-navbar {
     min-height: 60px;
+  }
+  .site-navbar .check {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 120px 10px;
+        grid-template-columns: 120px 10px;
+  }
+  .site-navbar .check .dark {
+    background: #110d0d;
+  }
+  .site-navbar .check input[type=checkbox] {
+    visibility: hidden;
+  }
+  .site-navbar .check .box {
+    width: 40px;
+    height: 10px;
+    background: gray;
+    position: relative;
+    border-radius: 4px;
+    top: 4px;
+  }
+  .site-navbar .check label {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+    cursor: pointer;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    background: #333333;
+  }
+  .site-navbar .check input[type=checkbox]:checked + label {
+    left: 27px;
+    background: white;
   }
   .site-navbar ul {
     position: absolute;
